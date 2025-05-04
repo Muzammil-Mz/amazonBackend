@@ -1,0 +1,37 @@
+we ask from user :fullname, email, phone ,password
+const userschema =new mongoose.Schema({
+    userVerified:{
+        email:{
+            type:Boolean,
+            default:false //if email verified its converted to true
+        },phone:{
+            type:Boolean,
+            default:false, //if phone verified its converted to true
+        }
+    },userVerifyToken:{
+        email:{
+            type:String //token of email is stored
+        },phone:{
+            type:String
+        }
+    }
+}
+{
+timeStamp:true //
+}
+)
+
+
+register api flow: 
+1. take all required true things from user from postman
+2. check duplicatecheck this will cross check if the user is already registered
+
+3. hash the password
+let hashpassword= await bcrypt.hash (password,10)
+
+generate token for email and password
+structuret the whole user in object and save in mongodb
+
+{
+    
+}
